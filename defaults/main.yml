@@ -1,0 +1,4 @@
+---
+java_version: 9.0.7
+java_zulu_mirror: https://cdn.azul.com/zulu/bin
+java_zulu_build: 1
