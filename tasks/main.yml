@@ -2,7 +2,7 @@
 - name: install JDK via yum
   yum:
     name: "{{ java_zulu_mirror }}/zulu{{ java_version }}.{{ java_zulu_build }}-jdk{{ java_version }}-linux.x86_64.rpm"
-  when: ansible_distribution == 'CentOS' or ansible_distribution == 'Red Hat Enterprise Linux'
+  when: ansible_os_family == 'RedHat'
 
 - name: install JDK via apt
   apt:
