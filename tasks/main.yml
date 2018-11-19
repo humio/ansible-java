@@ -2,9 +2,20 @@
 - name: install JDK via yum
   yum:
     name: "{{ java_zulu_mirror }}/zulu{{ java_zulu_version }}-jdk{{ java_version }}-linux.x86_64.rpm"
-  when: ansible_os_family == 'RedHat'
+  when: zulu_mirror != 'master' and ansible_os_family == 'RedHat'
+
+- name: copy JDK
+  copy:
+    src: "zulu{{ java_zulu_version }}-jdk{{ java_version }}-linux.x86_64.rpm"
+    dest: "/tmp/zulu{{ java_zulu_version }}-jdk{{ java_version }}-linux.x86_64.rpm"
+  when: zulu_mirror == 'master'
+
+- name: install JDK via yum from master
+  yum:
+    name: "/tmp/zulu{{ java_zulu_version }}-jdk{{ java_version }}-linux.x86_64.rpm"
+  when: zulu_mirror == 'master' and ansible_os_family == 'RedHat'
 
 - name: install JDK via apt
   apt:
     deb: "{{ java_zulu_mirror }}/zulu{{ java_zulu_version }}-jdk{{ java_version }}-linux.x86_64.deb"
-  when: ansible_distribution == 'Debian' or ansible_distribution == 'Ubuntu'
+  when: zulu_mirror != 'master' and ansible_distribution == 'Debian' or ansible_distribution == 'Ubuntu'
