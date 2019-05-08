@@ -9,7 +9,8 @@ Role Variables
 --------------
 
 ```yaml
-java_version: 9.0.7
+java_version: 11.0.1
+java_zulu_version: 11.2.3
 java_zulu_mirror: https://cdn.azul.com/zulu/bin
 java_zulu_build: 1
 ```
@@ -31,4 +32,4 @@ Apache
 Author Information
 ------------------
 
-If you're having issues with this module please to not hesitate to reach out to us on the #ansible channel on our [Slack community team](https://community.humio.com/). 
+If you're having issues with this module please to not hesitate to reach out to us on the #ansible channel on our [Slack community team](https://community.humio.com/).
