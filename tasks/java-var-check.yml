@@ -1,0 +1,7 @@
+---
+- set_fact:
+    split_version: "{{ java_version.split('.') }}"
+- set_fact:
+    java_major_version: "{{ split_version[0] }}"
+- set_fact:
+    java_zulu_version: "{{ split_version[2] | ternary('{{ split_version[0] }}.{{ split_version[1] }}+{{ split_version[2] }}', '{{ split_version[0] }}.{{ split_version[1] }}') }}"
