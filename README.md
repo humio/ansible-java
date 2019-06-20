@@ -9,10 +9,13 @@ Role Variables
 --------------
 
 ```yaml
-java_version: 9.0.7
-java_zulu_mirror: https://cdn.azul.com/zulu/bin
-java_zulu_build: 1
+java_version: 11.2.3
 ```
+
+Typically, using the default `java_version` is recommended (it will be updated by Humio staff as needed), but you can
+find valid versions by taking a look at Zulu's [list of binaries](http://static.azul.com/zulu/bin/). Note that the role
+will automatically convert `11.2.3` to `11.2+3` behind the scenes. In the previously linked list, mentions of `11.2+3`
+should be specified in `java_version` as `11.2.3` for this reason.
 
 Example Playbook
 ----------------

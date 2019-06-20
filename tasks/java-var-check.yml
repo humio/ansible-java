@@ -1,0 +1,12 @@
+---
+- name: split java_version into major/minor/patch components
+  set_fact:
+    split_version: "{{ java_version.split('.') }}"
+- name: ensure java variables are set
+  set_fact:
+    java_major_version: "{{ split_version[0] }}"
+    zulu_major_minor_patch: "{{ split_version[0] }}.{{ split_version[1] }}+{{ split_version[2] }}"
+    zulu_major_minor: "{{ split_version[0] }}.{{ split_version[1] }}"
+- name: ensure java_zulu_version variable is set
+  set_fact:
+    java_zulu_version: "{{ split_version[2] | ternary('{{ zulu_major_minor_patch }}', '{{ zulu_major_minor }}') }}"
