@@ -1,7 +1,7 @@
 galaxy_info:
   author: Martin Westergaard Lassen & Joel Watson
   description: Azul Zuul JDK for use with Humio
-  company: Humio, Inc.
+  company: Humio
 
   license: Apache
 
