@@ -3,7 +3,7 @@
 Ansible Java
 =========
 
-This module install Azul Zuul OpenJDK on the host.
+This module install Azul Zulu OpenJDK on the host.
 
 Role Variables
 --------------
