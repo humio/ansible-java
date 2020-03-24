@@ -23,5 +23,7 @@ jobs:
           python3 -m pip install --upgrade pip
           python3 -m pip install -r requirements.txt
       - name: Test with molecule
+        env:
+          MOLECULE_NO_LOG: "false"
         run: |
-          MOLECULE_NO_LOG="false" molecule test
+          molecule test
