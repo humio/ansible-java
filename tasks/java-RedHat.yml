@@ -10,4 +10,4 @@
 
 - name: install JDK via yum
   yum:
-    name: zulu-{{ java_major_version }}-{{ java_zulu_version }}
+    name: zulu-{{ redhat_java_major_version }}-{{ redhat_java_zulu_version }}
