@@ -12,3 +12,19 @@
 - name: install JDK via apt
   apt:
     name: zulu-{{ java_major_version }}={{ java_zulu_version }}
+
+- name: Pin zulu-11 version
+  copy:
+    dest: "/etc/apt/preferences.d/zulu11"
+    content: |
+      Package: zulu-11
+      Pin: version 11.2+3
+      Pin-Priority: 550
+
+- name: Pin zulu-13 version
+  copy:
+    dest: "/etc/apt/preferences.d/zulu13"
+    content: |
+      Package: zulu-13
+      Pin: version 13.33+25-2
+      Pin-Priority: 550
