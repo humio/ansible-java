@@ -1,5 +1,3 @@
-[![Build Status](https://cloud.drone.io/api/badges/humio/ansible-java/status.svg)](https://cloud.drone.io/humio/ansible-java)
-
 Ansible Java
 =========
 
@@ -34,4 +32,4 @@ Apache
 Author Information
 ------------------
 
-If you're having issues with this module please to not hesitate to reach out to us on the #ansible channel on our [Slack community team](https://community.humio.com/). 
+If you're having issues with this module please to not hesitate to reach out to us on the #ansible channel on our [Slack community team](https://community.humio.com/).
