@@ -11,3 +11,4 @@
 - name: install JDK via yum
   yum:
     name: zulu-{{ redhat_java_major_version }}-{{ redhat_java_zulu_version }}
+    update_cache: yes
