@@ -12,6 +12,7 @@
 - name: install JDK via apt
   apt:
     name: zulu-{{ java_major_version }}={{ java_zulu_version }}
+    update_cache: yes
 
 - name: Pin zulu-11 version
   copy:
