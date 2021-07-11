@@ -1,0 +1,15 @@
+---
+# This is an example playbook to execute Ansible tests.
+
+- name: Verify
+  hosts: all
+  tasks:
+  - name: java version
+    shell: java --version
+    register: java_version
+  - debug:
+      var: java_version
+  - name: Example assertion
+    assert:
+      that:
+        - java_version.stdout_lines[1] == "OpenJDK Runtime Environment Zulu11.2+3 (build 11.0.1+13-LTS)"
