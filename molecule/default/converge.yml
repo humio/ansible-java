@@ -1,0 +1,7 @@
+---
+- name: Converge
+  hosts: all
+  tasks:
+    - name: "Include humio.java"
+      include_role:
+        name: "humio.java"
